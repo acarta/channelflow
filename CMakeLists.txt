@@ -26,6 +26,8 @@ OPTION(WITH_PYTHON "build a python wrapper, using boost-python" OFF)
 OPTION(WITH_HDF5CXX "enable legacy file format using hdf5 cxx" OFF)
 OPTION(WITH_GTEST "enable gtest unit testing" ON)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Set compiler flags that are build-type related
 if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
@@ -46,7 +48,7 @@ endif()
 ######## Basic settings ########
 
 # Ask for C++ 11
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
